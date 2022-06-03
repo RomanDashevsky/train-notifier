@@ -6,7 +6,21 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "eslint": "eslint ./src --ext .ts",
+    "eslint:fix": "npm run eslint -- --fix --quiet",
+    "stylelint": "stylelint \"src/**/*.*ss\" --custom-syntax postcss-scss",
+    "stylelint:fix": "stylelint \"src/**/*.*ss\" --custom-syntax postcss-scss --fix",
+    "pre-commit": "lint-staged",
+    "prepare": "husky install .husky"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "eslint ./src --ext .ts --fix"
+    ],
+    "src/**/*.scss": [
+      "stylelint \"src/**/*.*ss\" --custom-syntax postcss-scss --fix"
+    ]
   },
   "private": true,
   "dependencies": {
@@ -28,13 +42,23 @@
     "@angular/cli": "~14.0.0",
     "@angular/compiler-cli": "^14.0.0",
     "@types/jasmine": "~4.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "eslint": "7.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "8.0.1",
     "jasmine-core": "~4.1.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "lint-staged": "12.4.2",
     "modern-css-reset": "^1.4.0",
+    "postcss-scss": "^4.0.4",
+    "prettier": "2.2.1",
+    "stylelint": "14.4.0",
+    "stylelint-config-recommended": "^7.0.0",
     "typescript": "~4.7.2"
   }
 }

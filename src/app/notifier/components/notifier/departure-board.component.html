@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <th>Trip name</th>
+    <th>Arrival time</th>
+    <th>Departure time</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tripItem of $schedule | async; trackBy:tripId">
+      <app-trip-item
+        [name]="tripItem.relationships.trip.data.id"
+        [arrival]="tripItem.attributes.arrival_time"
+        [departure]="tripItem.attributes.departure_time"
+      ></app-trip-item>
+    </tr>
+  </tbody>
+</table>

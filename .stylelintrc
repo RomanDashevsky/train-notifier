@@ -1,0 +1,37 @@
+{
+  "extends": "stylelint-config-recommended",
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "extend",
+          "include",
+          "mixin",
+          "function",
+          "if",
+          "return",
+          "each",
+          "for",
+          "else",
+          "at-root"
+        ]
+      }
+    ],
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": [
+          "ng-deep"
+        ]
+      }
+    ],
+    "no-empty-source": null,
+    "block-no-empty": null,
+    "property-no-unknown": null,
+    "no-duplicate-selectors": null,
+    "no-descending-specificity": null,
+    "selector-type-no-unknown": null,
+    "font-family-no-missing-generic-family-keyword": null
+  }
+}

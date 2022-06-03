@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RoutePath } from './shared/enum/route-path'
-import { LayoutComponent } from './shared/components/layout/layout.component'
+import { RoutePath } from './shared/enum/route-path';
+import { LayoutComponent } from './shared/components/layout/layout.component';
 
 const routes: Routes = [
   {
-  path: RoutePath.Root,
-  pathMatch: 'full',
-  redirectTo: RoutePath.Notifier,
-},
+    path: RoutePath.Root,
+    pathMatch: 'full',
+    redirectTo: RoutePath.Notifier,
+  },
   {
     path: RoutePath.Root,
     component: LayoutComponent,
@@ -28,6 +28,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -2,7 +2,6 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { LayoutComponent } from './layout.component';
 
-
 describe('LayoutComponent', () => {
   let component: LayoutComponent;
   let fixture: ComponentFixture<LayoutComponent>;
@@ -13,7 +12,7 @@ describe('LayoutComponent', () => {
         declarations: [LayoutComponent],
         schemas: [CUSTOM_ELEMENTS_SCHEMA],
       }).compileComponents();
-    }),
+    })
   );
 
   beforeEach(() => {
