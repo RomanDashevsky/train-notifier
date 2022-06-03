@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RoutePath } from './shred/enum/route-path'
-import { LayoutComponent } from './shred/components/layout/layout.component'
+import { RoutePath } from './shared/enum/route-path'
+import { LayoutComponent } from './shared/components/layout/layout.component'
 
 const routes: Routes = [
   {

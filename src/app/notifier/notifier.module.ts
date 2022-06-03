@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NotifierComponent } from './components/notifier.component';
 import { NotifierRoutingModule } from './notifier-routing.module'
+import { MbtaApiService } from './services/mbta-api.service'
+import { HttpClientModule } from '@angular/common/http'
+import { SharedModule } from '../shared/shared.module'
 
 
 
@@ -10,8 +13,13 @@ import { NotifierRoutingModule } from './notifier-routing.module'
     NotifierComponent
   ],
   imports: [
+    HttpClientModule,
     CommonModule,
-    NotifierRoutingModule
+    NotifierRoutingModule,
+    SharedModule,
+  ],
+  providers: [
+    MbtaApiService,
   ]
 })
 export class NotifierModule { }

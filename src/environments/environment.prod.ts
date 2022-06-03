@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  mbtaApiUrl: 'https://api-v3.mbta.com',
 };
