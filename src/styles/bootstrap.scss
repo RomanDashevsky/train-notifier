@@ -1,0 +1,8 @@
+@import '~modern-css-reset/dist/reset.css';
+@import "./core";
+
+html {
+  font-size: 16px;
+  font-family: 'Roboto', Arial, sans-serif;
+  color: $color-font-gray;
+}

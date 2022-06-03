@@ -1,0 +1,9 @@
+@import 'variables';
+
+@mixin for-phone-only {
+  @media (max-width: $phone-width) { @content; }
+}
+
+@mixin for-tablet-only {
+  @media (min-width: $phone-width + 1) and (max-width: $tablet-width) { @content; }
+}
