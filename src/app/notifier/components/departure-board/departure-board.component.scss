@@ -1,0 +1,20 @@
+@import "src/styles/core";
+
+$cell-height: 2rem;
+
+table {
+  width: 100%;
+
+  th {
+    text-align: left;
+    height: calc($cell-height + 1rem);
+  }
+
+  td {
+    height: $cell-height;
+  }
+
+  tr.is-soon-arrived td {
+    background-color: $color-warning;
+  }
+}

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DepartureBoardComponent } from './components/notifier/departure-board.component';
+import { DepartureBoardComponent } from './components/departure-board/departure-board.component';
 
 const routes: Routes = [
   {

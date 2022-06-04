@@ -5,16 +5,20 @@ export interface PlaceData {
   };
 }
 
+export interface ScheduleAttributes {
+  arrival_time: string;
+  departure_time: string;
+}
+
+export interface ScheduleRelationships {
+  stop: PlaceData;
+  trip: PlaceData;
+}
+
 export interface Schedule {
   id: string;
-  attributes: {
-    arrival_time: string;
-    departure_time: string;
-  };
-  relationships: {
-    stop: PlaceData;
-    trip: PlaceData;
-  };
+  attributes: ScheduleAttributes;
+  relationships: ScheduleRelationships;
 }
 
 export interface ScheduleResponse {

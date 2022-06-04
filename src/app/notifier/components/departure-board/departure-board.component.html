@@ -1,0 +1,30 @@
+<ng-container *ngTemplateOutlet="board; context: {
+  currentTime: storeService.currentTime$ | async,
+  data: storeService.data$ | async
+}"></ng-container>
+
+<ng-template #board let-currentTime="currentTime" let-data="data">
+  <h3>Curren time: {{ currentTime | date: 'medium' }}</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Trip name</th>
+        <th>Arrival time</th>
+        <th>Departure time</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let tripItem of data; trackBy:tripId"
+        [class.is-soon-arrived]="isSoonArrived(tripItem.arrivalTime, currentTime)"
+      >
+        <td class="trip-name">{{ tripItem.name }}</td>
+        <td class="arrival-time">{{ tripItem.arrivalTime | date: 'medium' }}</td>
+        <td class="departure-time">{{ tripItem.departureTime | date: 'medium' }}</td>
+        <td class="status">{{ getStatus(tripItem.arrivalTime, currentTime) }}</td>
+      </tr>
+    </tbody>
+  </table>
+</ng-template>

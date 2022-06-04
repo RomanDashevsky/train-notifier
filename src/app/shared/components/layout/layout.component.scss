@@ -39,6 +39,7 @@ main {
   width: 100%;
   height: 100vh;
   background-color: $color-bg-gray-light;
+  overflow: auto;
 
   .content-container {
     max-width: calc($tablet-width - 2rem);
