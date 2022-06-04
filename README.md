@@ -1,6 +1,6 @@
 # App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+This is applicants challenge task app. App powered by Angular, provide train schedule and using mbta api.
 
 ## Development server
 
